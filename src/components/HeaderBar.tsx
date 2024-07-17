@@ -13,6 +13,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { colors } from "../constants/colors";
+import { screenSize } from "../utils";
+import { useMediaQuery } from "@mui/material";
 
 type Props = {
   title: string;
@@ -23,6 +25,9 @@ const navItems = ["Home", "About", "Projects", "Contact"];
 
 export default function HeaderBar({ title }: Props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const isTablet = useMediaQuery(`(max-width:${screenSize.tablet})`);
+  const headerHeight = isTablet ? 64 : 80;
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -51,8 +56,7 @@ export default function HeaderBar({ title }: Props) {
       <AppBar component="nav" sx={{ bgcolor: colors.secondaryBlack }}>
         <Toolbar
           variant="dense"
-          //   disableGutters
-          sx={{ minHeight: 80, height: 80 }}
+          sx={{ minHeight: headerHeight, height: headerHeight }}
         >
           <IconButton
             color="inherit"
