@@ -1,8 +1,10 @@
+import { Stack, Typography } from "@mui/material";
+
 const App = () => {
   return (
-    <div>
-      <h1>Portfolio</h1>
-    </div>
+    <Stack>
+      <Typography variant="h1">Portfolio</Typography>
+    </Stack>
   );
 };
 
