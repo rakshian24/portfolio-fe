@@ -1,201 +1,96 @@
-import { Stack } from "@mui/material";
+import {
+  List,
+  ListItem,
+  ListItemText,
+  Stack,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
+import { screenSize } from "../../utils";
+import { NavLink } from "react-router-dom";
+import { ROUTES } from "../../constants";
+import { colors } from "../../constants/colors";
 
 const About = () => {
+  const isTablet = useMediaQuery(`(max-width:${screenSize.tablet})`);
+
   return (
     <Stack>
-      <h1>About Page</h1>
-      What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and
-      typesetting industry. Lorem Ipsum has been the industry's standard dummy
-      text ever since the 1500s, when an unknown printer took a galley of type
-      and scrambled it to make a type specimen book. It has survived not only
-      five centuries, but also the leap into electronic typesetting, remaining
-      essentially unchanged. It was popularised in the 1960s with the release of
-      Letraset sheets containing Lorem Ipsum passages, and more recently with
-      desktop publishing software like Aldus PageMaker including versions of
-      Lorem Ipsum. Why do we use it? It is a long established fact that a reader
-      will be distracted by the readable content of a page when looking at its
-      layout. The point of using Lorem Ipsum is that it has a more-or-less
-      normal distribution of letters, as opposed to using 'Content here, content
-      here', making it look like readable English. Many desktop publishing
-      packages and web page editors now use Lorem Ipsum as their default model
-      text, and a search for 'lorem ipsum' will uncover many web sites still in
-      their infancy. Various versions have evolved over the years, sometimes by
-      accident, sometimes on purpose (injected humour and the like). Where does
-      it come from? Contrary to popular belief, Lorem Ipsum is not simply random
-      text. It has roots in a piece of classical Latin literature from 45 BC,
-      making it over 2000 years old. Richard McClintock, a Latin professor at
-      Hampden-Sydney College in Virginia, looked up one of the more obscure
-      Latin words, consectetur, from a Lorem Ipsum passage, and going through
-      the cites of the word in classical literature, discovered the undoubtable
-      source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-      Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in
-      45 BC. This book is a treatise on the theory of ethics, very popular
-      during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor
-      sit amet..", comes from a line in section 1.10.32. The standard chunk of
-      Lorem Ipsum used since the 1500s is reproduced below for those interested.
-      Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
-      Cicero are also reproduced in their exact original form, accompanied by
-      English versions from the 1914 translation by H. Rackham. What is Lorem
-      Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting
-      industry. Lorem Ipsum has been the industry's standard dummy text ever
-      since the 1500s, when an unknown printer took a galley of type and
-      scrambled it to make a type specimen book. It has survived not only five
-      centuries, but also the leap into electronic typesetting, remaining
-      essentially unchanged. It was popularised in the 1960s with the release of
-      Letraset sheets containing Lorem Ipsum passages, and more recently with
-      desktop publishing software like Aldus PageMaker including versions of
-      Lorem Ipsum. Why do we use it? It is a long established fact that a reader
-      will be distracted by the readable content of a page when looking at its
-      layout. The point of using Lorem Ipsum is that it has a more-or-less
-      normal distribution of letters, as opposed to using 'Content here, content
-      here', making it look like readable English. Many desktop publishing
-      packages and web page editors now use Lorem Ipsum as their default model
-      text, and a search for 'lorem ipsum' will uncover many web sites still in
-      their infancy. Various versions have evolved over the years, sometimes by
-      accident, sometimes on purpose (injected humour and the like). Where does
-      it come from? Contrary to popular belief, Lorem Ipsum is not simply random
-      text. It has roots in a piece of classical Latin literature from 45 BC,
-      making it over 2000 years old. Richard McClintock, a Latin professor at
-      Hampden-Sydney College in Virginia, looked up one of the more obscure
-      Latin words, consectetur, from a Lorem Ipsum passage, and going through
-      the cites of the word in classical literature, discovered the undoubtable
-      source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-      Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in
-      45 BC. This book is a treatise on the theory of ethics, very popular
-      during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor
-      sit amet..", comes from a line in section 1.10.32. The standard chunk of
-      Lorem Ipsum used since the 1500s is reproduced below for those interested.
-      Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
-      Cicero are also reproduced in their exact original form, accompanied by
-      English versions from the 1914 translation by H. Rackham. What is Lorem
-      Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting
-      industry. Lorem Ipsum has been the industry's standard dummy text ever
-      since the 1500s, when an unknown printer took a galley of type and
-      scrambled it to make a type specimen book. It has survived not only five
-      centuries, but also the leap into electronic typesetting, remaining
-      essentially unchanged. It was popularised in the 1960s with the release of
-      Letraset sheets containing Lorem Ipsum passages, and more recently with
-      desktop publishing software like Aldus PageMaker including versions of
-      Lorem Ipsum. Why do we use it? It is a long established fact that a reader
-      will be distracted by the readable content of a page when looking at its
-      layout. The point of using Lorem Ipsum is that it has a more-or-less
-      normal distribution of letters, as opposed to using 'Content here, content
-      here', making it look like readable English. Many desktop publishing
-      packages and web page editors now use Lorem Ipsum as their default model
-      text, and a search for 'lorem ipsum' will uncover many web sites still in
-      their infancy. Various versions have evolved over the years, sometimes by
-      accident, sometimes on purpose (injected humour and the like). Where does
-      it come from? Contrary to popular belief, Lorem Ipsum is not simply random
-      text. It has roots in a piece of classical Latin literature from 45 BC,
-      making it over 2000 years old. Richard McClintock, a Latin professor at
-      Hampden-Sydney College in Virginia, looked up one of the more obscure
-      Latin words, consectetur, from a Lorem Ipsum passage, and going through
-      the cites of the word in classical literature, discovered the undoubtable
-      source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-      Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in
-      45 BC. This book is a treatise on the theory of ethics, very popular
-      during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor
-      sit amet..", comes from a line in section 1.10.32. The standard chunk of
-      Lorem Ipsum used since the 1500s is reproduced below for those interested.
-      Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
-      Cicero are also reproduced in their exact original form, accompanied by
-      English versions from the 1914 translation by H. Rackham. What is Lorem
-      Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting
-      industry. Lorem Ipsum has been the industry's standard dummy text ever
-      since the 1500s, when an unknown printer took a galley of type and
-      scrambled it to make a type specimen book. It has survived not only five
-      centuries, but also the leap into electronic typesetting, remaining
-      essentially unchanged. It was popularised in the 1960s with the release of
-      Letraset sheets containing Lorem Ipsum passages, and more recently with
-      desktop publishing software like Aldus PageMaker including versions of
-      Lorem Ipsum. Why do we use it? It is a long established fact that a reader
-      will be distracted by the readable content of a page when looking at its
-      layout. The point of using Lorem Ipsum is that it has a more-or-less
-      normal distribution of letters, as opposed to using 'Content here, content
-      here', making it look like readable English. Many desktop publishing
-      packages and web page editors now use Lorem Ipsum as their default model
-      text, and a search for 'lorem ipsum' will uncover many web sites still in
-      their infancy. Various versions have evolved over the years, sometimes by
-      accident, sometimes on purpose (injected humour and the like). Where does
-      it come from? Contrary to popular belief, Lorem Ipsum is not simply random
-      text. It has roots in a piece of classical Latin literature from 45 BC,
-      making it over 2000 years old. Richard McClintock, a Latin professor at
-      Hampden-Sydney College in Virginia, looked up one of the more obscure
-      Latin words, consectetur, from a Lorem Ipsum passage, and going through
-      the cites of the word in classical literature, discovered the undoubtable
-      source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-      Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in
-      45 BC. This book is a treatise on the theory of ethics, very popular
-      during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor
-      sit amet..", comes from a line in section 1.10.32. The standard chunk of
-      Lorem Ipsum used since the 1500s is reproduced below for those interested.
-      Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
-      Cicero are also reproduced in their exact original form, accompanied by
-      English versions from the 1914 translation by H. Rackham. What is Lorem
-      Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting
-      industry. Lorem Ipsum has been the industry's standard dummy text ever
-      since the 1500s, when an unknown printer took a galley of type and
-      scrambled it to make a type specimen book. It has survived not only five
-      centuries, but also the leap into electronic typesetting, remaining
-      essentially unchanged. It was popularised in the 1960s with the release of
-      Letraset sheets containing Lorem Ipsum passages, and more recently with
-      desktop publishing software like Aldus PageMaker including versions of
-      Lorem Ipsum. Why do we use it? It is a long established fact that a reader
-      will be distracted by the readable content of a page when looking at its
-      layout. The point of using Lorem Ipsum is that it has a more-or-less
-      normal distribution of letters, as opposed to using 'Content here, content
-      here', making it look like readable English. Many desktop publishing
-      packages and web page editors now use Lorem Ipsum as their default model
-      text, and a search for 'lorem ipsum' will uncover many web sites still in
-      their infancy. Various versions have evolved over the years, sometimes by
-      accident, sometimes on purpose (injected humour and the like). Where does
-      it come from? Contrary to popular belief, Lorem Ipsum is not simply random
-      text. It has roots in a piece of classical Latin literature from 45 BC,
-      making it over 2000 years old. Richard McClintock, a Latin professor at
-      Hampden-Sydney College in Virginia, looked up one of the more obscure
-      Latin words, consectetur, from a Lorem Ipsum passage, and going through
-      the cites of the word in classical literature, discovered the undoubtable
-      source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-      Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in
-      45 BC. This book is a treatise on the theory of ethics, very popular
-      during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor
-      sit amet..", comes from a line in section 1.10.32. The standard chunk of
-      Lorem Ipsum used since the 1500s is reproduced below for those interested.
-      Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
-      Cicero are also reproduced in their exact original form, accompanied by
-      English versions from the 1914 translation by H. Rackham. What is Lorem
-      Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting
-      industry. Lorem Ipsum has been the industry's standard dummy text ever
-      since the 1500s, when an unknown printer took a galley of type and
-      scrambled it to make a type specimen book. It has survived not only five
-      centuries, but also the leap into electronic typesetting, remaining
-      essentially unchanged. It was popularised in the 1960s with the release of
-      Letraset sheets containing Lorem Ipsum passages, and more recently with
-      desktop publishing software like Aldus PageMaker including versions of
-      Lorem Ipsum. Why do we use it? It is a long established fact that a reader
-      will be distracted by the readable content of a page when looking at its
-      layout. The point of using Lorem Ipsum is that it has a more-or-less
-      normal distribution of letters, as opposed to using 'Content here, content
-      here', making it look like readable English. Many desktop publishing
-      packages and web page editors now use Lorem Ipsum as their default model
-      text, and a search for 'lorem ipsum' will uncover many web sites still in
-      their infancy. Various versions have evolved over the years, sometimes by
-      accident, sometimes on purpose (injected humour and the like). Where does
-      it come from? Contrary to popular belief, Lorem Ipsum is not simply random
-      text. It has roots in a piece of classical Latin literature from 45 BC,
-      making it over 2000 years old. Richard McClintock, a Latin professor at
-      Hampden-Sydney College in Virginia, looked up one of the more obscure
-      Latin words, consectetur, from a Lorem Ipsum passage, and going through
-      the cites of the word in classical literature, discovered the undoubtable
-      source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-      Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in
-      45 BC. This book is a treatise on the theory of ethics, very popular
-      during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor
-      sit amet..", comes from a line in section 1.10.32. The standard chunk of
-      Lorem Ipsum used since the 1500s is reproduced below for those interested.
-      Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
-      Cicero are also reproduced in their exact original form, accompanied by
-      English versions from the 1914 translation by H. Rackham.
+      <Typography
+        variant={isTablet ? "h5" : "h4"}
+        sx={{ mt: 0, mb: isTablet ? 3 : 4 }}
+      >
+        About Me
+      </Typography>
+      <Typography paragraph>
+        Hello! I'm{" "}
+        <span style={{ fontSize: 17, fontWeight: 600, color: colors.green }}>
+          Rakshith Sindhiya R 😎
+        </span>{" "}
+        a dedicated and passionate Senior Frontend Engineer with over 6+ years
+        of experience in crafting responsive, dynamic, and user-centric web
+        applications. My expertise lies in utilizing modern frontend
+        technologies such as React.js, JavaScript, HTML, and CSS to bring
+        engaging and efficient user interfaces to life.
+      </Typography>
+      <Typography paragraph>
+        Throughout my career, I have worked on a variety of projects, ranging
+        from small business websites to large-scale enterprise applications. My
+        role has often involved collaborating closely with designers, backend
+        developers, and stakeholders to ensure that the final product not only
+        meets but exceeds user expectations.
+      </Typography>
+      <Typography paragraph>
+        I thrive in environments that challenge me to continuously learn and
+        adapt to new technologies and methodologies. My approach to frontend
+        development is driven by a deep understanding of the importance of
+        usability, performance, and accessibility. I am always eager to
+        implement best practices and leverage the latest advancements in web
+        development to enhance the user experience.
+      </Typography>
+      <Typography paragraph sx={{ mb: 0 }}>
+        Some of my key accomplishments include:
+      </Typography>
+      <List sx={{ listStyle: "outside", pl: isTablet ? 3 : 4 }}>
+        <ListItem sx={{ display: "list-item", pl: 0.5 }}>
+          <ListItemText>
+            Leading the development of a highly interactive and scalable fintech
+            platform that significantly increased user engagement and sales.
+          </ListItemText>
+        </ListItem>
+        <ListItem sx={{ display: "list-item", pl: 0.5 }}>
+          <ListItemText>
+            Optimizing and refactoring legacy codebases to improve performance
+            and maintainability, resulting in faster load times and a better
+            overall user experience.
+          </ListItemText>
+        </ListItem>
+        <ListItem sx={{ display: "list-item", pl: 0.5 }}>
+          <ListItemText>
+            Mentoring junior developers and conducting code reviews to maintain
+            high coding standards and promote a culture of continuous
+            improvement.
+          </ListItemText>
+        </ListItem>
+      </List>
+      <Typography paragraph>
+        When I'm not coding, I enjoy exploring new technologies and contributing
+        to personal projects. I also love spending time outdoors, growing
+        plants, and spending time with my family.
+      </Typography>
+      <Typography paragraph>
+        I am always open to new opportunities and collaborations. Feel free to{" "}
+        <NavLink
+          to={ROUTES.CONTACT}
+          style={{ fontWeight: "500", color: colors.green }}
+        >
+          reach out
+        </NavLink>{" "}
+        if you'd like to connect or discuss potential projects!
+      </Typography>
+      <Typography paragraph>
+        Thank you for taking the time to learn more about me.
+      </Typography>
     </Stack>
   );
 };
