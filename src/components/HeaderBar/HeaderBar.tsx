@@ -33,8 +33,8 @@ export default function HeaderBar({ title }: Props) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const { pathname } = useLocation();
-
   const isTablet = useMediaQuery(`(max-width:${screenSize.tablet})`);
+
   const headerHeight = isTablet
     ? TABLET_APP_HEADER_HEIGHT
     : DESKTOP_APP_HEADER_HEIGHT;
